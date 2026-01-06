@@ -3,9 +3,10 @@
 ## 🖥️ Frontend Technologies
 
 ### Core Framework
-- **React.js 18.3.1** - Modern JavaScript library for building user interfaces
-- **React Router DOM 6.26.0** - Client-side routing for single-page applications
-- **JavaScript ES6+** - Modern JavaScript features and syntax
+**React.js (v18.3.1)** – A powerful JavaScript library for building fast, scalable, and component-based user interfaces.
+**React Router DOM (v6.26.0)** – Enables seamless client-side navigation and routing in single-page applications.
+**JavaScript (ES6+)** – Utilizes modern JavaScript syntax and features for cleaner, more efficient code.
+
 
 ### HTTP Client
 - **Axios 1.7.0** - Promise-based HTTP client for API communication
