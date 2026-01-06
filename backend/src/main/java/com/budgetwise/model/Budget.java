@@ -1,3 +1,14 @@
+/**
+ * Represents a Budget entity in the BudgetWise application.
+ *
+ * This class maps to the "budgets" table and defines a user-specific
+ * budget for a particular expense category. Each user can have only
+ * one budget per category, enforced through a unique constraint.
+ *
+ * It includes validation rules to ensure data integrity, such as
+ * mandatory category names and positive budget limits. The entity
+ * maintains a many-to-one relationship with the User entity.
+ */
 package com.budgetwise.model;
 
 import jakarta.persistence.*;
