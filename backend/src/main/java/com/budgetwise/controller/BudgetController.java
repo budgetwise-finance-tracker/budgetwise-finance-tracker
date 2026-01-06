@@ -27,16 +27,18 @@ public class BudgetController {
         this.userRepository = userRepository;
     }
 
+    // Fetch all budgets for the logged-in user
     @GetMapping
     public ResponseEntity<List<BudgetResponse>> getBudgets(Authentication auth) {
         User user = userRepository.findByEmail(auth.getName()).orElseThrow();
         List<BudgetResponse> budgets = budgetService.getBudgetsForUser(user)
                 .stream()
-                .map(this::toResponse)
+                .map(this::toResponse) // Convert entity to response DTO
                 .collect(Collectors.toList());
         return ResponseEntity.ok(budgets);
     }
 
+    // Create or update budget for a specific category
     @PostMapping
     public ResponseEntity<BudgetResponse> addOrUpdateBudget(@Valid @RequestBody BudgetRequest req, Authentication auth) {
         User user = userRepository.findByEmail(auth.getName()).orElseThrow();
@@ -44,6 +46,7 @@ public class BudgetController {
         return ResponseEntity.ok(toResponse(budget));
     }
 
+    // Delete budget by category name
     @DeleteMapping("/{category}")
     public ResponseEntity<Void> deleteBudget(@PathVariable String category, Authentication auth) {
         User user = userRepository.findByEmail(auth.getName()).orElseThrow();
