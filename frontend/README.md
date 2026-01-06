@@ -22,6 +22,7 @@ The app will run on http://localhost:3000
 - Dashboard with financial overview
 - Transaction management (add income/expenses)
 - Real-time balance calculation
+  Export csv file
 - Responsive design
 
 ## Backend Integration
