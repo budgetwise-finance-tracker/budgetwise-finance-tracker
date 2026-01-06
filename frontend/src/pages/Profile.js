@@ -1,3 +1,4 @@
+//implementation of profile.js with enhanced styling and gamification features
 import React, { useState, useEffect } from "react";
 import api from "../services/api"; // Import API
 import "./Profile.css";
@@ -166,7 +167,7 @@ const Profile = () => {
             </button>
           </div>
         </div>
-
+        //improved styling for profile page 
         {/* GAMIFICATION & STATS ROW */}
         <div className="stats-row">
           <div className="stat-card">
